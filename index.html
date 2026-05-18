@@ -6,99 +6,146 @@
   <title>TFT_LCD_Display_EC11_Board</title>
 
   <style>
-    body
-    {
-      font-family: Arial, sans-serif;
-      margin: 40px;
-      background-color: #f5f5f5;
+    :root {
+      color-scheme: light;
+      --bg: #eef3f9;
+      --panel: #ffffff;
+      --text: #1d2a35;
+      --muted: #5d6b79;
+      --primary: #1e73d8;
+      --primary-soft: #e8f1fd;
+      --border: #d9e4f0;
+      --shadow: 0 12px 32px rgba(25, 58, 99, 0.08);
     }
 
-    h1
-    {
-      color: #333333;
+    * {
+      box-sizing: border-box;
     }
 
-    ul
-    {
-      list-style-type: none;
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      padding: 48px 20px;
+      font-family: "Segoe UI", Roboto, Arial, sans-serif;
+      background: linear-gradient(180deg, #f8fbff 0%, var(--bg) 100%);
+      color: var(--text);
+    }
+
+    main {
+      width: 100%;
+      max-width: 840px;
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      box-shadow: var(--shadow);
+      padding: 28px;
+    }
+
+    h1 {
+      margin: 0 0 8px;
+      font-size: clamp(1.6rem, 3vw, 2rem);
+      color: var(--text);
+    }
+
+    p {
+      margin: 0 0 20px;
+      color: var(--muted);
+      font-size: 1rem;
+    }
+
+    ul {
+      list-style: none;
       padding: 0;
+      margin: 0;
+      display: grid;
+      gap: 10px;
     }
 
-    li
-    {
-      margin: 12px 0;
-    }
-
-    a
-    {
+    li a {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      padding: 12px 14px;
+      border-radius: 10px;
+      border: 1px solid var(--border);
+      background: #ffffff;
+      color: var(--primary);
+      font-weight: 600;
       text-decoration: none;
-      color: #0066cc;
-      font-size: 18px;
+      transition: background-color 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
     }
 
-    a:hover
-    {
-      text-decoration: underline;
+    li a::after {
+      content: "↗";
+      font-size: 0.95rem;
+      opacity: 0.65;
+    }
+
+    li a:hover {
+      background: var(--primary-soft);
+      border-color: #bdd6f5;
+      transform: translateY(-1px);
     }
   </style>
 
 </head>
 
 <body>
+  <main>
+    <h1>TFT_LCD_Display_EC11_Board</h1>
+    <p>Available files:</p>
 
-  <h1>TFT_LCD_Display_EC11_Board</h1>
-
-  <p>Available files:</p>
-
-  <ul>
-    <li>
-      <a href="assets/TFT_LCD_Display_EC11_Board_Schematic.pdf">
-        Schematic
-      </a>
-    </li>
-    <li>
-      <a href="assets/TFT-LCD-DISPLAY-EC11_Dimensions.png">
-        Board Dimensions
-      </a>
-    </li>
-    <li>
-      <a href="assets/TFT_LCD_Display_EC11_top_3D.png">
-        Board Top (3D)
-      </a>
-    </li>
-    <li>
-      <a href="assets/TFT_LCD_Display_EC11_top.png">
-        Board Top
-      </a>
-    </li>
-    <li>
-      <a href="assets/TFT_LCD_Display_EC11_bottom.png">
-        Board Bottom
-      </a>
-    </li>
-    <li>
-      <a href="assets/ibom.html">
-        Interactive BOM
-      </a>
-    </li>
-    <li>
-      <a href="stlViewer.html?file=openSCAD/TFT-LCD-DISPLAY-EC11_R10.stl">
-        R1.0 Box
-      </a>
-    </li>
-    <li>
-      <a href="stlViewer.html?file=openSCAD/TFT-LCD-DISPLAY-EC11_R20.stl">
-        R2.0 Box
-      </a>
-    </li>
-    <li>
-      <a href="stlViewer.html?file=openSCAD/fourSpacers4.4.stl">
-        Spacers between Display and Board
-      </a>
-    </li>
-
-
-  </ul>
-
+    <ul>
+      <li>
+        <a href="assets/TFT_LCD_Display_EC11_Board_Schematic.pdf">
+          Schematic
+        </a>
+      </li>
+      <li>
+        <a href="assets/TFT-LCD-DISPLAY-EC11_Dimensions.png">
+          Board Dimensions
+        </a>
+      </li>
+      <li>
+        <a href="assets/TFT_LCD_Display_EC11_top_3D.png">
+          Board Top (3D)
+        </a>
+      </li>
+      <li>
+        <a href="assets/TFT_LCD_Display_EC11_top.png">
+          Board Top
+        </a>
+      </li>
+      <li>
+        <a href="assets/TFT_LCD_Display_EC11_bottom.png">
+          Board Bottom
+        </a>
+      </li>
+      <li>
+        <a href="assets/ibom.html">
+          Interactive BOM
+        </a>
+      </li>
+      <li>
+        <a href="stlViewer.html?file=openSCAD/TFT-LCD-DISPLAY-EC11_R10.stl">
+          R1.0 Box
+        </a>
+      </li>
+      <li>
+        <a href="stlViewer.html?file=openSCAD/TFT-LCD-DISPLAY-EC11_R20.stl">
+          R2.0 Box
+        </a>
+      </li>
+      <li>
+        <a href="stlViewer.html?file=openSCAD/fourSpacers4.4.stl">
+          Spacers between Display and Board
+        </a>
+      </li>
+    </ul>
+  </main>
 </body>
 </html>
